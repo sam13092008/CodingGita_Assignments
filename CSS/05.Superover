@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Over Scoreboard</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b1329;
+            background-image: linear-gradient(to bottom, #111e38 0%, #080c16 70%, #04060a 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 750px;
+            height: 480px;
+            background: rgba(10, 15, 30, 0.6);
+            border-radius: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .header-icon {
+            font-size: 20px;
+        }
+
+        .header-title {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .scorecards {
+            display: flex;
+            gap: 24px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .card {
+            width: 300px;
+            height: 260px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .card.ind {
+            background-color: #2b57ab;
+        }
+
+        .card.pak {
+            background-color: #3b9c48;
+        }
+
+        .team-title {
+            color: #ffffff;
+            font-size: 36px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .balls-row {
+            display: flex;
+            gap: 8px;
+        }
+
+        .ball-circle {
+            width: 32px;
+            height: 32px;
+            background-color: #ffffff;
+            color: #111111;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 800;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+
+        .score-display {
+            color: #ffffff;
+            font-size: 36px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+
+        .actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        .action-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 26px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            transition: transform 0.1s ease;
+        }
+
+        .action-btn:active {
+            transform: scale(0.95);
+        }
+
+        .btn-bat {
+            background-color: #f4c430;
+            color: #ffffff;
+        }
+
+        .btn-reset {
+            background-color: #d32f2f;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+  
+        <div class="header">
+            <div class="header-icon">🏏</div>
+            <div class="header-title">SUPER OVER</div>
+        </div>
+
+  
+        <div class="scorecards">
+     
+            <div class="card ind">
+                <div class="team-title">IND</div>
+                <div class="balls-row">
+                    <div class="ball-circle">4</div>
+                    <div class="ball-circle">3</div>
+                    <div class="ball-circle">2</div>
+                    <div class="ball-circle">6</div>
+                    <div class="ball-circle">6</div>
+                    <div class="ball-circle">6</div>
+                </div>
+                <div class="score-display">27/0</div>
+            </div>
+
+  
+            <div class="card pak">
+                <div class="team-title">PAK</div>
+                <div class="balls-row">
+                    <div class="ball-circle">2</div>
+                    <div class="ball-circle">4</div>
+                    <div class="ball-circle">0</div>
+                    <div class="ball-circle">3</div>
+                    <div class="ball-circle">1</div>
+                    <div class="ball-circle">4</div>
+                </div>
+                <div class="score-display">14/0</div>
+            </div>
+        </div>
+
+        <div class="actions">
+         
+            <button class="action-btn btn-bat" title="Bat">
+                🏏
+            </button>
+        
+            <button class="action-btn btn-reset" title="Reset">
+                🔄
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
